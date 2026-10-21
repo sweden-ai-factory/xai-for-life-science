@@ -83,7 +83,7 @@ Remember that you need to activate your environment every time you restart your 
 Once you have activated your environment, you can install all the required packages for this workshop using the following command:
 
 ```shell
-pip install -r https://raw.githubusercontent.com/sweden-ai-factory/gen-ai-for-life-science/refs/heads/main/requirements.txt
+pip install -r https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/requirements.txt
 ```
 
 (miniforge)=
@@ -139,7 +139,7 @@ better to disable the auto activation with:
 conda config --set auto_activate_base false
 ```
 
-2. Download <https://raw.githubusercontent.com/sweden-ai-factory/gen-ai-for-life-science/refs/heads/main/environment.yaml>
+2. Download <https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/environment.yaml>
 
 :::{tip}
 If you have a GPU, you might want to comment `pytorch` and uncomment `pytorch-gpu` in the 
@@ -169,7 +169,7 @@ conda activate workshop
 pixi init
 ```-->
 
-2.  Download <https://raw.githubusercontent.com/sweden-ai-factory/gen-ai-for-life-science/refs/heads/main/pixi.toml>, and use one the below commands
+2.  Download <https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/pixi.toml>, and use one the below commands
 
 ```shell
 pixi shell         # If you don't have a GPU
@@ -188,15 +188,15 @@ or prefix commands with `pixi run`.
 Once you have git installed, enter the following command into your terminal:
 
 ```shell
-git clone https://github.com/sweden-ai-factory/gen-ai-for-life-science
+git clone https://github.com/sweden-ai-factory/xai-for-life-science
 ```
 
-The repository will be cloned to a directory named `gen-ai-for-life-science`
+The repository will be cloned to a directory named `xai-for-life-science`
 which will also contain the notebooks. If you want to get the latest copy,
 you update this repository by using
 
 ```shell
-cd gen-ai-for-life-science
+cd xai-for-life-science
 git pull
 ```
 

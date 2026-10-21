@@ -13,7 +13,7 @@ In this workshop, we will give an introduction to explainable AI (xAI) and its r
 :caption: The lesson
 :maxdepth: 1
 
-episode.md
+setup.md
 ```
 
 ```{toctree}
