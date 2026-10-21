@@ -2,7 +2,9 @@
 
 [Python][python] is a popular language for scientific computing, and a frequent choice for machine learning as well.
 
-This workshop will use a Python environment containing **JupyterLab** and the necessary dependencies as the primary interface for all practical sessions. You are encouraged to follow the [local installation](#local-installation) option. [Google Colab](#colab-fallback) will be available as a fallback option if needed.
+This workshop will use a Python environment containing **JupyterLab** and the necessary dependencies as the primary interface for all practical sessions. You are encouraged to follow the [local installation](#local-installation) option. 
+
+<!-- [Google Colab](#colab-fallback) will be available as a fallback option if needed. -->
 
 Please set up your Python environment at least a day in advance of the workshop. 
 If you encounter problems with the installation procedure, attend the pre-workshop setup session for assistance, so that you are ready to go as soon as the workshop begins.
@@ -233,11 +235,36 @@ If you open a Jupyter notebook here, most of the required packages are already p
 Once in, you can verify your setup by running:
 
 ```python
+from importlib.metadata import version
 import torch
-print("CUDA available:", torch.cuda.is_available())
-print("GPU device:", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "None")
+print("Accelerator available:", torch.accelerator.is_available())
+print("GPU device:", torch.accelerator.current_accelerator() if torch.accelerator.is_available() else None)
 print("PyTorch version:", torch.__version__)
+
+import pytorch_grad_cam
+print("PyTorch Grad-CAM version:", version("grad-cam"))
+
+import shap
+print("SHAP version:", shap.__version__)
+
+import captum
+print("Captum version:", captum.__version__)
 ```
+
+You should get something similar as follows
+
+:::{output}
+
+```text
+Accelerator available: True
+GPU device: cuda
+PyTorch version: 2.13.0
+PyTorch Grad-CAM version: 1.5.7
+SHAP version: 0.52.0
+Captum version: 0.9.0
+```
+
+:::
 
 <!--
 (datasets)=
@@ -248,8 +275,6 @@ Download the datasets for this workshop [here](https://drive.google.com/file/d/1
 Unzip these file and place them in your repository.
 -->
 
-
--->
 
 [jupyter]: http://jupyter.org/
 [jupyter-install]: http://jupyter.readthedocs.io/en/latest/install.html#optional-for-experienced-python-developers-installing-jupyter-with-pip
