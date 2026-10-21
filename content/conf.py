@@ -13,10 +13,15 @@
 
 # -- Project information -----------------------------------------------------
 
-# FIXME: choose title
-project = "Your lesson name"
-# FIXME: insert correct author
-author = "The contributors"
+project = "Explainable AI for Life Science"
+author = "\
+Ivan Cucchi, \
+Fahria Kabir, \
+Ashwin Mohanan, \
+Nishat Mowla, \
+Ana Tanevska, \
+Erik Ylipää. \
+"
 copyright = f"2026, Sweden AI Factory, {author}"
 
 github_user = "sweden-ai-factory"
@@ -41,8 +46,7 @@ extensions = [
     "sphinxcontrib.mermaid",
 ]
 
-# FIXME: add bibtex files for references if any
-bibtex_bibfiles = []
+bibtex_bibfiles = ["references.bib"]
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
@@ -62,7 +66,7 @@ myst_enable_extensions = [
 ]
 myst_dmath_double_inline = True
 myst_fence_as_directive = {"mermaid"}
-myst_substitutions = {"author": author}
+myst_substitutions = {"author": author, "copyright": copyright}
 
 # Settings for sphinx-copybutton
 copybutton_exclude = ".linenos, .gp"
@@ -139,7 +143,6 @@ html_context = {
 # sphinx-evita
 evita_eu_funding_badge = "co-funded"
 
-# FIXME: modify intersphinx mapping to link to external content
 
 # Intersphinx mapping.  For example, with this you can use
 # :py:mod:`multiprocessing` to link straight to the Python docs of that module.
