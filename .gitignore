@@ -4,3 +4,5 @@
 .jupyter_cache
 jupyter_execute
 uv.lock
+.pixi
+.pdm-build

@@ -28,14 +28,14 @@ Once you have done either, proceed to getting the [notebooks](#notebooks). Final
 
 Open a terminal (Mac/Linux) or Command Prompt (Windows) and run the following commands.
 
-1. Create a [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments) called `workshop`:
+1. Create a [virtual environment](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments) called `venv-xai-for-ls`:
 
 `````{tabs}
 
 ````{group-tab} On Linux/macOS
 
 ```shell
-python3 -m venv workshop
+python3 -m venv venv-xai-for-ls
 ```
 
 ````
@@ -46,8 +46,8 @@ python3 -m venv workshop
 For Windows consider using [Miniforge](#miniforge) or [pixi](#pixi) instead
 :::
 
-```shell
-py -m venv workshop
+```bat
+py -m venv venv-xai-for-ls
 ```
 
 ````
@@ -61,15 +61,15 @@ py -m venv workshop
 ````{group-tab} On Linux/macOS
 
 ```shell
-source workshop/bin/activate
+source venv-xai-for-ls/bin/activate
 ```
 
 ````
 
 ````{group-tab} On Windows
 
-```shell
-workshop\Scripts\activate
+```bat
+venv-xai-for-ls\Scripts\activate
 ```
 
 ````
@@ -146,7 +146,7 @@ If you have a GPU, you might want to comment `pytorch` and uncomment `pytorch-gp
 `environment.yaml` file.
 :::
 
-3. Create an environment called `workshop`:
+3. Create an environment called `xai-for-ls`:
 
 ```shell
 conda env create --yes -f environment.yaml
@@ -155,7 +155,7 @@ conda env create --yes -f environment.yaml
 3. Activate the environment:
 
 ```shell
-conda activate workshop
+conda activate xai-for-ls
 ```
 
 (pixi)=
@@ -203,7 +203,7 @@ git pull
 ### Launch JupyterLab
 
 From within your virtual environment (using `activate` script) or conda
-environment (using `conda activate workshop` / `pixi shell`) navigate to the
+environment (using `conda activate xai-for-ls` / `pixi shell`) navigate to the
 notebooks directory and launch JupyterLab
 
 ```shell
