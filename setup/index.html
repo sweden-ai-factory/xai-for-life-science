@@ -1,0 +1,574 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../genindex/"><link rel="search" title="Search" href="../search/"><link rel="next" title="Quick Reference" href="../quick-reference/"><link rel="prev" title="Explainable AI for Life Science" href="../">
+        <link rel="prefetch" href="../_static/SEAIF_favicon_black.png" as="image">
+        <link rel="prefetch" href="../_static/SEAIF_favicon_white.png" as="image">
+
+    <link rel="shortcut icon" href="../_static/favicon.png"><!-- Generated with Sphinx 8.2.3 and Furo 2025.12.19 -->
+        <title>Setup - Explainable AI for Life Science</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx_lesson.css?v=e9df6548" />
+    <link rel="stylesheet" type="text/css" href="../_static/term_role_formatting.css?v=4194e21c" />
+    <link rel="stylesheet" type="text/css" href="../_static/furo_ext_lesson.css?v=6c0cde2e" />
+    <link rel="stylesheet" type="text/css" href="../_static/EN_Co-funded.css?v=bf081b0b" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="../_static/overrides.css?v=1c72d2de" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../"><div class="brand">Explainable AI for Life Science</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../">
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../_static/SEAIF_favicon_black.png" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../_static/SEAIF_favicon_white.png" alt="Dark Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text">Explainable AI for Life Science</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search/" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">The lesson</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Setup</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quick-reference/">Quick Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/">Instructor’s guide</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="https://github.com/sweden-ai-factory/xai-for-life-science/blob/main//content/setup.md?plain=true" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div><div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/sweden-ai-factory/xai-for-life-science/edit/main//content/setup.md" rel="edit" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="setup">
+<h1>Setup<a class="headerlink" href="#setup" title="Link to this heading">¶</a></h1>
+<p><a class="reference external" href="https://python.org">Python</a> is a popular language for scientific computing, and a frequent choice for machine learning as well.</p>
+<p>This workshop will use a Python environment containing <strong>JupyterLab</strong> and the necessary dependencies as the primary interface for all practical sessions. You are encouraged to follow the <a class="reference internal" href="#local-installation">local installation</a> option.</p>
+<!-- [Google Colab](#colab-fallback) will be available as a fallback option if needed. -->
+<p>Please set up your Python environment at least a day in advance of the workshop.
+If you encounter problems with the installation procedure, attend the pre-workshop setup session for assistance, so that you are ready to go as soon as the workshop begins.</p>
+<section id="local-installation">
+<span id="id1"></span><h2>Local installation<a class="headerlink" href="#local-installation" title="Link to this heading">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>You have different options:</p>
+<ul class="simple">
+<li><p>Use <a class="reference internal" href="#pip">pip</a> and virtual environments: If you have <code class="docutils literal notranslate"><span class="pre">git</span></code> in your terminal and are
+comfortable using virtual environments and have a working Python interpreter
+(at least version 3.10 or above), or</p></li>
+<li><p>Use <a class="reference internal" href="#miniforge">Miniforge</a> / <a class="reference internal" href="#pixi">pixi</a> and conda environments: Recommended for Windows users,
+and users who don’t have tools like a Python interpreter, <code class="docutils literal notranslate"><span class="pre">git</span></code> in their devices.</p></li>
+</ul>
+<p>Once you have done either, proceed to getting the <a class="reference internal" href="#notebooks">notebooks</a>. Finally download the <a class="reference internal" href="#datasets"><span class="xref myst">datasets</span></a></p>
+</div>
+<section id="using-pip">
+<span id="pip"></span><h3>Using pip<a class="headerlink" href="#using-pip" title="Link to this heading">¶</a></h3>
+<p>Open a terminal (Mac/Linux) or Command Prompt (Windows) and run the following commands.</p>
+<ol class="arabic simple">
+<li><p>Create a <a class="reference external" href="https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/#create-and-use-virtual-environments">virtual environment</a> called <code class="docutils literal notranslate"><span class="pre">venv-xai-for-ls</span></code>:</p></li>
+</ol>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-T24gTGludXgvbWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-T24gTGludXgvbWFjT1M=" name="T24gTGludXgvbWFjT1M=" role="tab" tabindex="0">On Linux/macOS</button><button aria-controls="panel-0-T24gV2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-T24gV2luZG93cw==" name="T24gV2luZG93cw==" role="tab" tabindex="-1">On Windows</button></div><div aria-labelledby="tab-0-T24gTGludXgvbWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-0-T24gTGludXgvbWFjT1M=" name="T24gTGludXgvbWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv-xai-for-ls
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-T24gV2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-T24gV2luZG93cw==" name="T24gV2luZG93cw==" role="tabpanel" tabindex="0"><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For Windows consider using <a class="reference internal" href="#miniforge">Miniforge</a> or <a class="reference internal" href="#pixi">pixi</a> instead</p>
+</div>
+<div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>py -m venv venv-xai-for-ls
+</pre></div>
+</div>
+</div></div>
+<ol class="arabic simple" start="2">
+<li><p>Activate the newly created virtual environment:</p></li>
+</ol>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-T24gTGludXgvbWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-1-T24gTGludXgvbWFjT1M=" name="T24gTGludXgvbWFjT1M=" role="tab" tabindex="0">On Linux/macOS</button><button aria-controls="panel-1-T24gV2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-1-T24gV2luZG93cw==" name="T24gV2luZG93cw==" role="tab" tabindex="-1">On Windows</button></div><div aria-labelledby="tab-1-T24gTGludXgvbWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-1-T24gTGludXgvbWFjT1M=" name="T24gTGludXgvbWFjT1M=" role="tabpanel" tabindex="0"><div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>venv-xai-for-ls/bin/activate
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-T24gV2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-1-T24gV2luZG93cw==" name="T24gV2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-bat notranslate"><div class="highlight"><pre><span></span>venv-xai-for-ls\Scripts\activate
+</pre></div>
+</div>
+</div></div>
+<p>Remember that you need to activate your environment every time you restart your terminal!</p>
+<ol class="arabic simple" start="3">
+<li><p>Install the required packages:</p></li>
+</ol>
+<p>Once you have activated your environment, you can install all the required packages for this workshop using the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="using-miniforge">
+<span id="miniforge"></span><h3>Using Miniforge<a class="headerlink" href="#using-miniforge" title="Link to this heading">¶</a></h3>
+<p>In this page, we give indications about how to install Miniforge and use conda/mamba.</p>
+<ol class="arabic simple">
+<li><p>The first step is to install <a class="reference external" href="https://conda-forge.org/download/">Miniforge</a>, which is a modified version of
+<em>Miniconda</em> using by default the
+community driven <a class="reference external" href="https://conda-forge.org/">conda-forge</a> channel.</p></li>
+</ol>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-T24gTGludXgvbWFjT1M=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-2-T24gTGludXgvbWFjT1M=" name="T24gTGludXgvbWFjT1M=" role="tab" tabindex="0">On Linux/macOS</button><button aria-controls="panel-2-T24gV2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-2-T24gV2luZG93cw==" name="T24gV2luZG93cw==" role="tab" tabindex="-1">On Windows</button></div><div aria-labelledby="tab-2-T24gTGludXgvbWFjT1M=" class="sphinx-tabs-panel group-tab" id="panel-2-T24gTGludXgvbWFjT1M=" name="T24gTGludXgvbWFjT1M=" role="tabpanel" tabindex="0"><p>Download the installer using curl or wget or your favorite program. For eg:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span><span class="s2">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="s2">.sh"</span>
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-L<span class="w"> </span>-O<span class="w"> </span><span class="s2">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="k">$(</span>uname<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span><span class="s2">.sh"</span>
+</pre></div>
+</div>
+<p>Execute the installer and initialize conda:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>bash<span class="w"> </span>Miniforge3-<span class="k">$(</span>uname<span class="k">)</span>-<span class="k">$(</span>uname<span class="w"> </span>-m<span class="k">)</span>.sh<span class="w"> </span>-b
+<span class="nv">$HOME</span>/miniforge3/bin/conda<span class="w"> </span>init<span class="w"> </span>--all
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-T24gV2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-2-T24gV2luZG93cw==" name="T24gV2luZG93cw==" role="tabpanel" tabindex="0"><p>On Windows, download
+<a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe">the Windows installer</a>
+and follow the instructions given in <a class="reference external" href="https://github.com/conda-forge/miniforge">https://github.com/conda-forge/miniforge</a>.</p>
+<p>Open an Anaconda Prompt and run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span> <span class="pre">--all</span></code>.</p>
+</div></div>
+<p>When it’s done, open a new terminal (click on <code class="docutils literal notranslate"><span class="pre">ctrl-alt-t</span></code>) and check that the
+line in the new terminal starts with <code class="docutils literal notranslate"><span class="pre">(base)</span></code>. The indication <code class="docutils literal notranslate"><span class="pre">(base)</span></code> means
+that you use the base “environment”.</p>
+<p>However, working in the <code class="docutils literal notranslate"><span class="pre">base</span></code> environment is not a good practice and it is
+better to disable the auto activation with:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>auto_activate_base<span class="w"> </span><span class="nb">false</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Download <a class="reference external" href="https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/environment.yaml">https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/environment.yaml</a></p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you have a GPU, you might want to comment <code class="docutils literal notranslate"><span class="pre">pytorch</span></code> and uncomment <code class="docutils literal notranslate"><span class="pre">pytorch-gpu</span></code> in the
+<code class="docutils literal notranslate"><span class="pre">environment.yaml</span></code> file.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Create an environment called <code class="docutils literal notranslate"><span class="pre">xai-for-ls</span></code>:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>--yes<span class="w"> </span>-f<span class="w"> </span>environment.yaml
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Activate the environment:</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>xai-for-ls
+</pre></div>
+</div>
+</section>
+<section id="using-pixi">
+<span id="pixi"></span><h3>Using pixi<a class="headerlink" href="#using-pixi" title="Link to this heading">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Install Pixi by following the <a class="reference external" href="https://pixi.sh/latest/#installation">installation instructions</a>.</p></li>
+</ol>
+<!--2. From an empty directory, initialize a Pixi project and add Python:
+
+```shell
+pixi init
+```-->
+<ol class="arabic simple" start="2">
+<li><p>Download <a class="reference external" href="https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/pixi.toml">https://raw.githubusercontent.com/sweden-ai-factory/xai-for-life-science/refs/heads/main/pixi.toml</a>, and use one the below commands</p></li>
+</ol>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pixi<span class="w"> </span>shell<span class="w">         </span><span class="c1"># If you don't have a GPU</span>
+pixi<span class="w"> </span>shell<span class="w"> </span>-e<span class="w"> </span>gpu<span class="w">  </span><span class="c1"># If you have a GPU</span>
+</pre></div>
+</div>
+<!--pixi import --feature=default environment.yaml-->
+<!--pixi import --feature=default requirements.txt-->
+<p>Use either <code class="docutils literal notranslate"><span class="pre">pixi</span> <span class="pre">shell</span></code> to enter the environment,
+or prefix commands with <code class="docutils literal notranslate"><span class="pre">pixi</span> <span class="pre">run</span></code>.</p>
+</section>
+<section id="getting-the-notebooks">
+<span id="notebooks"></span><h3>Getting the Notebooks<a class="headerlink" href="#getting-the-notebooks" title="Link to this heading">¶</a></h3>
+<p>Once you have git installed, enter the following command into your terminal:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/sweden-ai-factory/xai-for-life-science
+</pre></div>
+</div>
+<p>The repository will be cloned to a directory named <code class="docutils literal notranslate"><span class="pre">xai-for-life-science</span></code>
+which will also contain the notebooks. If you want to get the latest copy,
+you update this repository by using</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>xai-for-life-science
+git<span class="w"> </span>pull
+</pre></div>
+</div>
+</section>
+<section id="launch-jupyterlab">
+<h3>Launch JupyterLab<a class="headerlink" href="#launch-jupyterlab" title="Link to this heading">¶</a></h3>
+<p>From within your virtual environment (using <code class="docutils literal notranslate"><span class="pre">activate</span></code> script) or conda
+environment (using <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">xai-for-ls</span></code> / <code class="docutils literal notranslate"><span class="pre">pixi</span> <span class="pre">shell</span></code>) navigate to the
+notebooks directory and launch JupyterLab</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>xai-for-life-science/notebooks
+jupyter-lab
+</pre></div>
+</div>
+<p>which should also open JupyterLab.</p>
+<!--
+(colab-fallback)=
+## Fallback option: Google colab
+
+**Alternatively** you can use [Google colab](https://colab.research.google.com/). 
+
+If you open a Jupyter notebook here, most of the required packages are already pre-installed. Data will be downloaded/streamed automatically. Make sure that under Runtime > Change runtime type, your "Hardware accelerator" is set to T4 GPU or equivalent (you may need to do this for each notebook).
+- [Session 1 Notebook](https://colab.research.google.com/drive/1e6GhTPrmN7-rVMpQmXMj7r-RQ55Dh5Sq?usp=sharing)
+- [Session 2 Notebook](https://colab.research.google.com/drive/1u-ln7tlSkF86DsICCU-YDfHlyaCt95Vb?usp=sharing)
+- [Session 3 Notebook](https://colab.research.google.com/drive/1Ce4nzXpj_NHAXm4fZlI9dv1zK0HrdsGD?usp=sharing)
+- [Session 4 Notebook](https://colab.research.google.com/drive/14pTu8dZJvE67CjEj5UU9lp2-29RFrr5r?usp=sharing)
+
+-->
+</section>
+</section>
+<section id="checking-your-environment">
+<h2>Checking Your Environment<a class="headerlink" href="#checking-your-environment" title="Link to this heading">¶</a></h2>
+<p>Once in, you can verify your setup by running:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">importlib.metadata</span><span class="w"> </span><span class="kn">import</span> <span class="n">version</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Accelerator available:"</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">is_available</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"GPU device:"</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">current_accelerator</span><span class="p">()</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">accelerator</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"PyTorch version:"</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytorch_grad_cam</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"PyTorch Grad-CAM version:"</span><span class="p">,</span> <span class="n">version</span><span class="p">(</span><span class="s2">"grad-cam"</span><span class="p">))</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">shap</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"SHAP version:"</span><span class="p">,</span> <span class="n">shap</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">captum</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Captum version:"</span><span class="p">,</span> <span class="n">captum</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You should get something similar as follows</p>
+<div class="admonition-output output admonition" id="output-0">
+<p class="admonition-title">Output</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Accelerator available: True
+GPU device: cuda
+PyTorch version: 2.13.0
+PyTorch Grad-CAM version: 1.5.7
+SHAP version: 0.52.0
+Captum version: 0.9.0
+</pre></div>
+</div>
+</div>
+<!--
+(datasets)=
+## Downloading the required datasets
+
+Download the datasets for this workshop [here](https://drive.google.com/file/d/1gebRwvpcPmftuhgJEAy8Jftijgbcm18K/view?usp=sharing).
+
+Unzip these file and place them in your repository.
+-->
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../quick-reference/">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Quick Reference</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2026, Sweden AI Factory, Ivan Cucchi, Fahria Kabir, Ashwin Mohanan, Nishat Mowla, Ana Tanevska, Erik Ylipää. 
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/sweden-ai-factory/xai-for-life-science" aria-label="GitHub">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Setup</a><ul>
+<li><a class="reference internal" href="#local-installation">Local installation</a><ul>
+<li><a class="reference internal" href="#using-pip">Using pip</a></li>
+<li><a class="reference internal" href="#using-miniforge">Using Miniforge</a></li>
+<li><a class="reference internal" href="#using-pixi">Using pixi</a></li>
+<li><a class="reference internal" href="#getting-the-notebooks">Getting the Notebooks</a></li>
+<li><a class="reference internal" href="#launch-jupyterlab">Launch JupyterLab</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#checking-your-environment">Checking Your Environment</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../_static/documentation_options.js?v=187304be"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=35a8b989"></script>
+    <script src="../_static/minipres.js?v=a0d29692"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/tabs.js?v=3030b3cb"></script>
+    <script data-domain="learn.swedenaifactory.se/xai-for-life-science" defer="defer" src="https://plausible.io/js/script.js"></script>
+    </body>
+</html>
