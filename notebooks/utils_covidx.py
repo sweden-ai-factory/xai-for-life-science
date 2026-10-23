@@ -31,7 +31,10 @@ torch.manual_seed(SEED)
 
 # NOTE: if you want to force, for example to use SHAP
 # DEVICE = torch.device("cpu")
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+DEVICE = (
+    torch.accelerator.current_accelerator()
+    if torch.accelerator.is_available() else torch.device("cpu")
+)
 
 # ------------------------------------------------------------
 # Root folders - change these if you already have the raw datasets somewhere
