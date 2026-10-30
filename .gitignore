@@ -6,3 +6,6 @@ jupyter_execute
 uv.lock
 .pixi
 .pdm-build
+.virtual_documents
+__pycache__
+notebooks/data
