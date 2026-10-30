@@ -50,10 +50,10 @@ bibtex_bibfiles = ["references.bib"]
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
-# nb_execution_mode = "off"
+nb_execution_mode = "off"
 # nb_execution_mode = "auto"   # *only* execute if at least one output is missing.
 # nb_execution_mode = "force"
-nb_execution_mode = "cache"
+# nb_execution_mode = "cache"
 
 # https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
 myst_enable_extensions = [
@@ -84,6 +84,9 @@ exclude_patterns = [
     ".DS_Store",
     "jupyter_execute",
     "*venv*",
+    "notebooks/.virtual_documents/*",
+    "notebooks/.ipynb_checkpoints/*",
+    "notebooks/__pycache__/*",
 ]
 
 # -- Options for HTML output -------------------------------------------------

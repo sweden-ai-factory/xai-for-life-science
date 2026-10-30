@@ -10,10 +10,20 @@ In this workshop, we will give an introduction to explainable AI (xAI) and its r
 :::
 
 ```{toctree}
-:caption: The lesson
+:caption: Pre-workshop setup
 :maxdepth: 1
 
 setup.md
+```
+
+```{toctree}
+:caption: Lesson
+:maxdepth: 1
+
+talks.md
+notebooks/solutions/stroke_shap_exercise.ipynb
+notebooks/solutions/train_covidx.ipynb
+notebooks/solutions/xai_covidx.ipynb
 ```
 
 ```{toctree}
