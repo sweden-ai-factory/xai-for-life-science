@@ -20,4 +20,4 @@ jupyterlab-git >=0.55.0,<0.56
 jupyterlab-lsp >=5.3.0,<6
 python-lsp-server >=1.15.0,<2
 opencv-python-headless>=4.8
-
+scikit-image >=0.26.0
